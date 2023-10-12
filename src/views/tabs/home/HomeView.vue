@@ -5,7 +5,11 @@ import type { IHomeInfo } from '@/types'
 import LoadingView from '@/components/LoadingView.vue'
 
 // 请求数据
-const { data, pending } = useAsync(fetchHomePageData, {} as IHomeInfo)
+const { data, pending, execute } = useAsync(fetchHomePageData, {} as IHomeInfo, false)
+
+const getSearch = () => {
+  execute()
+}
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const { data, pending } = useAsync(fetchHomePageData, {} as IHomeInfo)
     placeholder="请输入搜索关键词"
   >
     <template #right-icon>
-      <div>搜索</div>
+      <div @click="getSearch">搜索</div>
     </template>
   </VanSearch>
   <LoadingView :loading="pending" type="loading">

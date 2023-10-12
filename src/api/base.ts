@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { showDialog } from 'vant'
-// 获取环境变量
-const { VITE_BASE_URL } = import.meta.env
+import config from '@/config'
 
 const service = axios.create({
-  baseURL: VITE_BASE_URL
+  baseURL: config.baseUrl
 })
 
 service.interceptors.response.use((response) => {

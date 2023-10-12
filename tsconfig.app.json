@@ -3,6 +3,9 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "mock/**/*.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "types": [
+      "node" 
+    ],
     "noImplicitAny": false,
     "allowJs": true,
     "baseUrl": ".",
