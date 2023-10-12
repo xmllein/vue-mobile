@@ -20,3 +20,4 @@
 - [vant-demo](https://github.com/vant-ui/vant-demo)
 - [基于 vite4 + Vue3.2 + TypeScript + pinia + mock + less + vantUI + 适配 + axios 封装的移动](https://juejin.cn/post/7226979399714373693)
 - [【从入门到提桶】vue3.2 + vite + vant + pinia + ts 移动端 h5 项目新手实践](https://juejin.cn/post/7134610733962100750)
+- [Vue3.3 + Vite4.3 + Element-Plus + TypeScript 从0到1搭建企业级后台管理系统（前后端开源）](https://juejin.cn/post/7228990409909108793)
