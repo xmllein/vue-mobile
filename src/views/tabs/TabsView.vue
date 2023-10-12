@@ -5,9 +5,9 @@ import { ref, watch } from 'vue'
 const route = useRoute()
 const router = useRouter()
 // 当前选中的tab
-const active = ref(route.name)
+const active = ref<string>(route.name as string)
 
-watch(active, (nv) => {
+watch(active, (nv: string) => {
   router.push({ name: nv })
 })
 </script>

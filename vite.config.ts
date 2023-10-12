@@ -27,5 +27,18 @@ export default defineConfig({
   },
   server: {
     port: 3000
+  },
+  build: {
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      // 打包优化
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString()
+          }
+        }
+      }
+    }
   }
 })
